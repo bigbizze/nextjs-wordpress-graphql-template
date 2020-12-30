@@ -3,9 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { getAllPagesWithSlug, getPage } from '../lib/get_pages';
 
-// import styles from '../styles/Home.module';
-// import blogStyles from '../styles/Blog.module.less';
-
 export default function Page({ postData }) {
     const router = useRouter();
     console.log(postData);
@@ -35,7 +32,7 @@ export default function Page({ postData }) {
                             <p>{formatDate(postData.date)}</p>
                         </div>
                         <div
-                            className="post-content content post-template-default single single-post postid-6 single-format-standard wp-embed-responsive singular enable-search-modal missing-post-thumbnail has-single-pagination showing-comments show-avatars footer-top-visible elementor-default elementor-kit- elementor-page elementor-page-6"
+                            className="post-content content"
                             dangerouslySetInnerHTML={{ __html: postData.content}}
                         />
                     </article>
